@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://holglee.github.io.com/2017/07/19/BSF学习总结/index.html">
 <meta property="og:site_name" content="Holglee的博客">
 <meta property="og:description" content="挤出机升温（电加热）：开启CCW泵； 设置初始值100°C，保温2小时； 阶段式升温（130-160-180-200-工艺温度），各阶段保温15min； 开启HEATER；">
-<meta property="og:updated_time" content="2017-07-20T14:12:27.863Z">
+<meta property="og:updated_time" content="2017-07-28T03:45:03.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BSF学习总结">
 <meta name="twitter:description" content="挤出机升温（电加热）：开启CCW泵； 设置初始值100°C，保温2小时； 阶段式升温（130-160-180-200-工艺温度），各阶段保温15min； 开启HEATER；">
@@ -338,8 +338,14 @@
 <h4 id="开挤出机："><a href="#开挤出机：" class="headerlink" title="开挤出机："></a>开挤出机：</h4><pre><code>开启润滑油油泵和冷却风机（齿轮减速器润滑油油泵、主电机冷却风机、齿轮泵冷却风机）；
 压力清零（主菜单进入压力传感界面）；
 手动模式下，设置下料量、螺杆转速、齿轮泵转速（待G/P压力为3.0Mpa时改为G/P模式，
-稳定后40min调为自动模式）；
+稳定后波动小于0.3，40min调为自动模式）；
 按顺序开机，油2、齿轮泵、主电机、油1、主料、辅料；
+
+###### 为加快开机速度，通常在手动模式下，设置好下料量和螺杆转速初始值的情况下，
+###### 保证G/P压力稳定在3.0MPa，先增加螺杆转速再加下料，直到工艺要求；
+</code></pre><h4 id="停挤出机："><a href="#停挤出机：" class="headerlink" title="停挤出机："></a>停挤出机：</h4><pre><code>G/P模式下，先降下料量再降螺杆转速；
+下料量低于70，调到手动模式，调节G/P转速；
+G/P压力低于MPa，关闭主辅下料；
 </code></pre><h4 id="MD升温（导热油加热）："><a href="#MD升温（导热油加热）：" class="headerlink" title="MD升温（导热油加热）："></a>MD升温（导热油加热）：</h4><pre><code>现场开启MD温控单元（油位和水位不低于1/3）；
 初始值设置为40°C，每次升温不大于10°C；
 超过50°C时开启驱动；
@@ -347,9 +353,16 @@
 初始值设置为40°C，每次升温不大于10°C；
 温控界面开启热风机和加热；
 开启链夹冷却风机、烘箱进排气风机以及入口出口排气风机；
-</code></pre><h4 id="工艺调整方向："><a href="#工艺调整方向：" class="headerlink" title="工艺调整方向："></a>工艺调整方向：</h4><pre><code>1).提升2TD定型温度可以减小收缩和孔隙率，增大透气；拉伸温度与其作用相反；
+</code></pre><h4 id="工艺调整方向："><a href="#工艺调整方向：" class="headerlink" title="工艺调整方向："></a>工艺调整方向：</h4><pre><code>1).提升2nd TD定型温度可以减小收缩和孔隙率，增大透气；1st TD拉伸温度与其作用相反；
 2).二次牵引速比可以调节MD收缩；
-</code></pre>
+</code></pre><!-- #### 性能内控标准：
+    9um：
+        - 厚度：9.4【0.5】
+        - 孔隙率：40%
+        - 收缩：
+        - 
+        - 透气： -->
+
       
     </div>
 
@@ -521,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#挤出机升温（电加热）："><span class="nav-number">1.</span> <span class="nav-text">挤出机升温（电加热）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开挤出机："><span class="nav-number">2.</span> <span class="nav-text">开挤出机：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MD升温（导热油加热）："><span class="nav-number">3.</span> <span class="nav-text">MD升温（导热油加热）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TD升温："><span class="nav-number">4.</span> <span class="nav-text">TD升温：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工艺调整方向："><span class="nav-number">5.</span> <span class="nav-text">工艺调整方向：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#挤出机升温（电加热）："><span class="nav-number">1.</span> <span class="nav-text">挤出机升温（电加热）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开挤出机："><span class="nav-number">2.</span> <span class="nav-text">开挤出机：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#停挤出机："><span class="nav-number">3.</span> <span class="nav-text">停挤出机：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MD升温（导热油加热）："><span class="nav-number">4.</span> <span class="nav-text">MD升温（导热油加热）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TD升温："><span class="nav-number">5.</span> <span class="nav-text">TD升温：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工艺调整方向："><span class="nav-number">6.</span> <span class="nav-text">工艺调整方向：</span></a></li></ol></div>
             
 
           </div>
